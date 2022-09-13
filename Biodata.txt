@@ -2,3 +2,4 @@ Nim		: 12210139
 Nama		: Yovan Dermawan
 Alamat		: Perum Duren Jaya JL. Salak 2 No 769
 Program Studi	: Sistem Informasi (SI)
+Nomor HP	: 081320650059
