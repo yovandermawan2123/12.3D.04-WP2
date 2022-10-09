@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $Judul?></title>
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css">
+    <title><?php echo $Judul ?></title>
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/style.css">
 </head>
+
 <body>
     <div id="wrapper">
         <header>
@@ -16,25 +18,65 @@
             </hgroup>
             <nav>
                 <ul>
-                    <li><a href="<?php echo base_url().'index.php/web'?>">Home</a></li>
-                    <li><a href="<?php echo base_url().'index.php/web/about'?>">About</a></li>
+                    <li><a href="<?php echo base_url() . 'index.php/web' ?>">Home</a></li>
+                    <li><a href="<?php echo base_url() . 'index.php/web/about' ?>">About</a></li>
                 </ul>
             </nav>
             <div class="clear"></div>
         </header>
         <section>
-            <h1><?php echo $Judul?></h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit unde ea deserunt repellendus pariatur consequuntur a eaque vero ullam dolorum ipsa dignissimos, inventore dicta totam nobis similique modi ab amet. Expedita, consequuntur sequi vel officiis nihil aliquid odio architecto labore commodi explicabo iste sit, magnam dicta velit ducimus tempore corrupti.
-            </p>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis officia pariatur mollitia voluptatem vitae? Eius, natus velit facere cupiditate placeat quia qui aperiam impedit modi iure veniam, totam ipsa recusandae dolorum officiis, corporis aliquam quo blanditiis ipsam neque quam dignissimos. Odio perferendis dolorum non quas iste deserunt corporis, dicta beatae at, maiores nesciunt vitae minus nisi nostrum quam ratione, est rem molestiae magnam? Aspernatur placeat consectetur ab ipsa quaerat sit recusandae numquam, possimus odio nemo dolores fugiat id nam quos perferendis laborum totam laboriosam incidunt facilis optio? Minus necessitatibus repellendus rem obcaecati, minima doloribus in, explicabo omnis, aliquam deserunt ipsum..
+            <h1><?php echo $Judul ?></h1>
+            <p align=’justify’>Pada pengertian codeigniter di atas
+                tadi di jelaskan bahwa codeigniter menggunakan metode MVC. Apa ituMVC? Kita juga harus mengetahui apa itu MVC sebelum masuk dan lebih
+                jauh dalam belajar codeigniter.</p>
+            <p>MVC adalah teknik atau konsep yang memisahkan
+                komponen utama menjadi tiga komponen yaitu model, view dan
+                controller.</p>
 
-            </p>
+            <ol type=”a”>
+                <li>Model</li>
+                <p align=’justify’>Model adalah kelas yang merepresentasikan atau
+                    memodelkan tipe data yang akan digunakan oleh aplikasi. Model juga
+                    dapat didefinisakn sebagai bagian penanganan yang berhubungan dengan
+                    pengolahan atau manipulasi database. Seperti misalnya mengambil data
+                    dari database, menginput dan pengolahan database lainnya. Semua
+                    intruksi atau fungsi yang berhubung dengan pengolahan database di
+                    letakkan di dalam model. Sebagai contoh, jika ingin membuat aplikasi
+                    untuk menghitung luas dan keliling lingkaran, maka dapat memodelkan
+                    objek lingkaran sebagai kelas model.</p>
+                <p align=’justify’>Sebagai catatan, Semua model harus disimpan di
+                    dalam folder application\models</p>
+                <li>View</li>
+                <p align=’justify’>View merupakan bagian yang menangani halaman user
+                    interface atau halaman yang muncul pada user(pada browser). Tampilan
+                    dari user interface di kumpulkan pada view untuk memisahkannya
+                    dengan controller dan model sehingga memudahkan web designer dalam
+                    melakukan pengembangan tampilan halaman website.</p>
+                <li>Controller</li>
+                <p align=’justify’>Controller merupakan kumpulan intruksi aksi yang
+                    menghubungkan model dan view, jadi user tidak akan berhubungan
+                    dengan model secara langsung, intinya data yang tersimpan di
+                    database (model) di ambil oleh controller dan kemudian controller
+                    pula yang menampilkan nya ke view. Jadi controller lah yang mengolah
+                    intruksi.</p>
+                <p align=’justify’>Dari penjelasan tentang model view dan controller
+                    di atas dapat di simpulkan bahwa controller sebagai penghubung view
+                    dan model. Misalnya pada aplikasi yang menampilkan data dengan
+                    menggunakan metode konsep mvc, controller memanggil intruksi pada
+                    model yang mengambil data pada database, kemudian controller yang
+                    meneruskannya pada view untuk di tampilkan. Jadi jelas sudah dan
+                    sangat mudah dalam pengembangan aplikasi dengan cara mvc ini karena
+                    web designer atau front-end developer tidak perlu lagi berhubungan
+                    dengan controller, dia hanya perlu berhubungan dengan view untuk
+                    mendesign tampilann aplikasi, karena back-end developer yang
+                    menangani bagian controller dan modelnya. Jadi pembagian tugas pun
+                    menjadi mudah dan pengembangan aplikasi dapat di lakukan dengan
+                    cepat dan terstruktur.</p>
         </section>
         <footer>
-            Beritangoding
+            <a href=”http://www.RentalBuku.com”>RentalBuku</a>
         </footer>
     </div>
 </body>
+
 </html>
