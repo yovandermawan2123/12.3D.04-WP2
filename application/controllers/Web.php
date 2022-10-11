@@ -56,11 +56,12 @@ class Web extends CI_Controller {
 
 	public function bio(){
 		// $data['bio'] = $this->m_data->ambil_data()->result();
+		
 		$data = array(
 			'judul' => 'Halaman Data',
 			'bio' => $this->m_data->ambil_data()->result()
 		);
-
+		
 		$this->load->view('v_header', $data);
 		$this->load->view('v_data', $data);
 		$this->load->view('v_footer', $data);
