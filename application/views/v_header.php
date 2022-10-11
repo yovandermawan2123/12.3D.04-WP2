@@ -19,6 +19,7 @@
                 <ul>
                     <li><a href="<?= base_url('web') ?>">Home</a></li>
                     <li><a href="<?= base_url('web/about') ?>">About</a></li>
+                    <li><a href="<?= base_url('web/bio') ?>">Biodata</a></li>
                 </ul>
             </nav>
             <div class="clear"></div>

@@ -6,6 +6,7 @@ class Web extends CI_Controller {
     {
         parent::__construct();
         $this->load->helper('url');
+		$this->load->model('m_data');
     }
 
 
@@ -51,6 +52,18 @@ class Web extends CI_Controller {
 			$this->load->view('contact', $data);
 		} 
 		$this->load->view('about', $data);
+	}
+
+	public function bio(){
+		// $data['bio'] = $this->m_data->ambil_data()->result();
+		$data = array(
+			'judul' => 'Halaman Data',
+			'bio' => $this->m_data->ambil_data()->result()
+		);
+
+		$this->load->view('v_header', $data);
+		$this->load->view('v_data', $data);
+		$this->load->view('v_footer', $data);
 	}
 	// public function parsing()
 	// {
