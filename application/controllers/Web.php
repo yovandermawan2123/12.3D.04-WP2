@@ -105,6 +105,7 @@ class Web extends CI_Controller {
 			$this->session->set_flashdata('success', 'Berhasil diubah');
         }
 		redirect(site_url('/web/bio'));
+		
 	}
 
 	public function save(){
