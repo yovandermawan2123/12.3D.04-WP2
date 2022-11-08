@@ -7,6 +7,7 @@ class Web extends CI_Controller {
         parent::__construct();
         $this->load->helper('url');
 		$this->load->model('m_data');
+		$this->load->library('form_validation');
     }
 
 
@@ -66,6 +67,84 @@ class Web extends CI_Controller {
 		$this->load->view('v_data', $data);
 		$this->load->view('v_footer', $data);
 	}
+	public function create(){
+		// $data['bio'] = $this->m_data->ambil_data()->result();
+		
+		$data = array(
+			'judul' => 'Halaman Data',
+			'bio' => $this->m_data->ambil_data()->result()
+		);
+		
+		$this->load->view('v_header', $data);
+		$this->load->view('v_create', $data);
+		$this->load->view('v_footer', $data);
+	}
+
+	public function edit($id){
+		// $data['bio'] = $this->m_data->ambil_data()->result();
+		
+		$data = array(
+			'judul' => 'Halaman Data Edit',
+			'bio' => $this->m_data->getById($id)
+		);
+		
+		$this->load->view('v_header', $data);
+		$this->load->view('v_edit', $data);
+		$this->load->view('v_footer', $data);
+	}
+
+	public function update($id){
+		// $data['bio'] = $this->m_data->ambil_data()->result();
+		
+		$biodata = $this->m_data;
+        $validation = $this->form_validation;
+        $validation->set_rules($biodata->rules());
+
+        if ($validation->run()) {
+            $biodata->update($id);
+			$this->session->set_flashdata('success', 'Berhasil diubah');
+        }
+		redirect(site_url('/web/bio'));
+	}
+
+	public function save(){
+		// $data['bio'] = $this->m_data->ambil_data()->result();
+		
+		// $data = array(
+		// 	'judul' => 'Halaman Data',
+		// 	'bio' => $this->m_data->ambil_data()->result()
+		// );
+		$biodata = $this->m_data;
+        $validation = $this->form_validation;
+        $validation->set_rules($biodata->rules());
+		
+		// $biodata->save();
+		// $this->session->set_flashdata('success', 'Berhasil disimpan');
+		// redirect(site_url('/web/bio'));
+
+        if ($validation->run()) {
+            $biodata->save();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+			
+        }
+		redirect(site_url('/web/bio'));
+        // $this->load->view("admin/product/new_form");
+		
+
+	
+	}
+
+	public function delete($id)
+    {
+		// print_r($id);die;
+       
+	
+        if (!isset($id)) show_404();
+        if ($this->m_data->delete($id)) {
+			redirect(site_url('/web/bio'));
+		}
+        
+    }
 	// public function parsing()
 	// {
 		
